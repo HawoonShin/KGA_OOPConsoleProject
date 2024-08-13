@@ -4,6 +4,16 @@
     internal class HiddenRoomScene : Scene
     {
         // 침실과 연결
+
+        //기계
+        //패널에 ACF입력
+        //조건 만족하고 타면 엔딩
+
+        //포스터
+        //기계 작동용 힌트
+
+        //빨간버튼
+        // 복도와 연결되는 문 생성(보류)
         private string input;
 
         public HiddenRoomScene(Game game) : base(game)

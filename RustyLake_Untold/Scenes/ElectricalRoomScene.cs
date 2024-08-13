@@ -10,6 +10,23 @@ namespace RustyLake_Untold.Scenes
     internal class ElectricalRoomScene : Scene
     {
         //복도와 연결
+
+        //퓨즈박스
+        //퍼즐이 복잡한 관게로 퓨즈를 하나 찾아오는 정도로 조건완화
+
+        //선반
+        // 주방 밸브 고정용 렌치 발견
+
+        //파이프
+        //아이템을 사용하여 때릴경우 산성액이 유출
+        //산성액은 실험에 상용됨
+
+        //환풍구
+        //퓨즈 발견
+
+        //땅의 얼룩
+        //의미 없음
+
         private string input;
 
         public ElectricalRoomScene(Game game) :base(game) 

@@ -36,7 +36,7 @@ namespace RustyLake_Untold.Scenes
             Console.Clear();
             Console.WriteLine("*******************************");
             Console.WriteLine("*                             *");
-            Console.WriteLine("*      Rusty Lake : Untold    *");
+            Console.WriteLine("*     Rusty Lake : Untold     *");
             Console.WriteLine("*                             *");
             Console.WriteLine("*******************************");
             Console.WriteLine();

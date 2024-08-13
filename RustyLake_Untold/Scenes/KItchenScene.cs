@@ -7,6 +7,27 @@ using System.Threading.Tasks;
 namespace RustyLake_Untold.Scenes
 {
     // 부엌
+    
+    //코트
+    // 시리즈 스토리 주인공의 신분증이 나온다.
+    // 딱히 아이템으론 필요 없다.
+
+    //싱크대
+    //전기실에서 찾은 렌치로 고칠수 있다
+    //그러면 물이 나온다.
+
+    // 커피 메이커
+    // 전원을 복구해야한다(전기실)
+    // 휴지통에서 커피필터 아이템 구하기
+    //물탱크에 물 체우기
+    // 만들어진 커피는 실험에 사용
+
+    //쓰레기통 
+    // 커피 필터 가 새것과 사용한것이 뒤엉켜 있다.
+
+    //아이스박스
+    // 코드는 cold (실험실에서 힌트 입수)(아이템말고 코드입력으로)
+    // 얼음 입수
     internal class KitchenScene : Scene
     {
         // 복도와 연결
@@ -23,7 +44,7 @@ namespace RustyLake_Untold.Scenes
             Console.Clear();
             Console.WriteLine("부엌에는 커피메이커와 작은 싱크대가 있습니다.");
             Console.WriteLine("옆의 쓰레기통에는 파리가 윙윙 거립니다.");
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
         public override void Render() 
         {
@@ -36,7 +57,14 @@ namespace RustyLake_Untold.Scenes
         {
             input = Console.ReadLine();
         }
-        public override void Update() { }
+        public override void Update() 
+        {
+            switch (input)
+            {
+                case "1":
+                    game.ChangeScene(SceneType.Hallway); break;
+            }
+        }
         public override void Exit() { }
     }
 }

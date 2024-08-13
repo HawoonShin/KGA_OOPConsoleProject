@@ -8,9 +8,8 @@ using RustyLake_Untold;
 namespace RustyLake_Untold.Scenes
 {
     
-    // abstract 여부때문에 오류났었다.
-    //다른 곳에서 Scene를 사용할 수 없었다?
-    // 원래 intercation 으로 되어있었다?
+    // 추상클래스!
+    // 기초 틀이 되는 부분
     public abstract class Scene
     {
         protected Game game;

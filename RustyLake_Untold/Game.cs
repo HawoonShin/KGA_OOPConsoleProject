@@ -66,6 +66,7 @@ namespace RustyLake_Untold
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
             scenes[(int)SceneType.Kitchen] = new KitchenScene(this);
             scenes[(int)SceneType.Office] = new OfficeScene(this);
+            scenes[(int)SceneType.Inventory] = new InventoryScene(this);
 
             // 현재 장면의 선택 및 입장? 출현?
             curScene = scenes[(int)SceneType.Title];
