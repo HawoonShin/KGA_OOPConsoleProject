@@ -15,7 +15,7 @@ namespace RustyLake_Untold.Kitchen
 
         }
 
-        // 정적함수?
+       
         public override void Enter()
         {
             Console.Clear();
