@@ -37,6 +37,8 @@ namespace RustyLake_Untold.Bedroom
             Console.WriteLine("5. CCTV");
             Console.WriteLine("6. 러그");
             Console.WriteLine("==============================");
+            Console.WriteLine("0. 인벤토리");
+            Console.WriteLine("==============================");
             Console.Write("선택 :");
 
         }
@@ -63,10 +65,7 @@ namespace RustyLake_Untold.Bedroom
                     Console.WriteLine("열쇠를 찾아보자.");
                     break;
                 case "3":
-                    //옷장 씬 따로 만들것
-                //서랍 1째칸에 힌트들로 비밀번호 입력
-                //서랍 2째칸에 1-2
-                //서랍 3째칸에 손전등
+                    game.ChangeScene(SceneType.BedroomDresser);
                     break;
                 //환풍구
                 case "4":
@@ -94,6 +93,8 @@ namespace RustyLake_Untold.Bedroom
                     Thread.Sleep(1000);
                     Console.WriteLine("하지만 너무 어두워서 무언가 필요할 것 같습니다.");
                     Thread.Sleep(1000);
+                    break;
+                case "0":
                     break;
             }
         }
