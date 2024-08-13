@@ -53,6 +53,7 @@ namespace RustyLake_Untold.Scenes
         }
         public override void Update() 
         {
+            //각 방문에 관한 세부 묘사 일부 필요
             switch (input) 
             {
                 case "1":

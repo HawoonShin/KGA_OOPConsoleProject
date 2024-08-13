@@ -95,6 +95,7 @@ namespace RustyLake_Untold.Bedroom
                     Thread.Sleep(1000);
                     break;
                 case "0":
+                    game.ChangeScene(SceneType.Inventory);
                     break;
             }
         }

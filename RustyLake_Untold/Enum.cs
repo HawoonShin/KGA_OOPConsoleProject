@@ -7,8 +7,10 @@
     public enum SceneType
     {
         Title, Select,
-        Bedroom, BedroomFind,
-        Hallway, Kitchen,Inventory,
+        Bedroom, BedroomFind, BedroomDresser,
+        Hallway, 
+        Kitchen, KitchenFind,
+        Inventory,
         ChemistryLab, ElectricalRoom, Office, HiddenRoom,Ending,
             Size //이거 넣으면 앞쪽에 size 오류 해결되나?
     }
