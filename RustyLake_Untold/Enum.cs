@@ -14,7 +14,7 @@
         ChemistryLab, ChemistryLabFind,
         ElectricalRoom, ElectricalRoomFind,
         Office, OfficeFind, OfficeComputer,
-        HiddenRoom,
+        HiddenRoom, HiddenRoomFind,
         Ending,
         Size
 

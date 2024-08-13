@@ -9,6 +9,8 @@ using RustyLake_Untold.Kitchen;
 using RustyLake_Untold.ChemistryLab;
 using RustyLake_Untold.ElectricalRoom;
 using RustyLake_Untold.Office;
+using RustyLake_Untold.HiddenRoom;
+
 
 namespace RustyLake_Untold
 {
@@ -79,9 +81,11 @@ namespace RustyLake_Untold
 
             scenes[(int)SceneType.Office] = new OfficeScene(this);
             scenes[(int)SceneType.OfficeFind] = new OfficeFind(this);
+            scenes[(int)SceneType.OfficeComputer] = new OfficeComputer(this);
 
 
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
+
             scenes[(int)SceneType.Inventory] = new InventoryScene(this);
             scenes[(int)SceneType.Ending] = new EndingScene(this);
 
