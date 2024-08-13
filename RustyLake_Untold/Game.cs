@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using RustyLake_Untold.Scenes;
 using RustyLake_Untold.Bedroom;
 using RustyLake_Untold.Kitchen;
+using RustyLake_Untold.ChemistryLab;
+using RustyLake_Untold.ElectricalRoom;
 
 namespace RustyLake_Untold
 {
@@ -70,6 +72,8 @@ namespace RustyLake_Untold
             scenes[(int)SceneType.Kitchen] = new KitchenScene(this);
 
             scenes[(int)SceneType.ChemistryLab] = new ChemistryLabScene(this);
+            scenes[(int)SceneType.ChemistryLabFind] = new ChemistryLabScene(this);
+
             scenes[(int)SceneType.ElectricalRoom] = new ElectricalRoomScene(this);
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
             scenes[(int)SceneType.Office] = new OfficeScene(this);
