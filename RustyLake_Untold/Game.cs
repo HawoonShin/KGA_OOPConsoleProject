@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RustyLake_Untold.Scenes;
 
 namespace RustyLake_Untold
 {
     //프로그램 파일과 동일하게 기초 틀은 교수님의 코드를 사용한다.
-    internal class Game
+    public class Game
     {
         private bool isRunning;
 
@@ -55,9 +56,16 @@ namespace RustyLake_Untold
             // 구현한 장면 추가
             scenes = new Scene[(int)SceneType.Size];
             //scenes[(int)SceneType.이동장소] = new 이동장소Scene(this);
-            scenes[(int)SceneType.Title] = new TitleScene(this);
             //scenes[(int)SceneType.Select] = new SelectScene(this);
+            scenes[(int)SceneType.Title] = new TitleScene(this);
             scenes[(int)SceneType.Bedroom] = new BedroomScene(this);
+            scenes[(int)SceneType.ChemistryLab] = new ChemistryLabScene(this);
+            scenes[(int)SceneType.Hallway] = new HallwayScene(this);
+            scenes[(int)SceneType.ElectricalRoom] = new ElectricalRoomScene(this);
+            scenes[(int)SceneType.Ending] = new EndingScene(this);
+            scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
+            scenes[(int)SceneType.Kitchen] = new KitchenScene(this);
+            scenes[(int)SceneType.Office] = new OfficeScene(this);
 
             // 현재 장면의 선택 및 입장? 출현?
             curScene = scenes[(int)SceneType.Title];

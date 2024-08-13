@@ -7,7 +7,7 @@
     public enum SceneType
     {
         Title, Select, Bedroom, Hallway, Kitchen,
-        ChemistryLab, ElectricalRoom, Office, HiddenRoom,
+        ChemistryLab, ElectricalRoom, Office, HiddenRoom,Ending,
             Size //이거 넣으면 앞쪽에 size 오류 해결되나?
     }
     //엔딩씬의 추가에 대해서 고려해볼것.

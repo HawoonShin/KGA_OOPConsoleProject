@@ -18,6 +18,7 @@
         {
             Console.Clear();
             Console.WriteLine(" 눈 앞에 침실이 있습니다.");
+            Thread.Sleep(2000); //잠시 글씨를 멈추게 한다
         }
 
         public override void Exit()

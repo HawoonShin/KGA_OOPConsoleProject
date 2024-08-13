@@ -7,8 +7,42 @@ using System.Threading.Tasks;
 namespace RustyLake_Untold.Scenes
 {
     // 전기실
-    internal class ElectricalRoomScene
+    internal class ElectricalRoomScene : Scene
     {
         //복도와 연결
+        private string input;
+
+        public ElectricalRoomScene(Game game) :base(game) 
+        {
+           
+        }
+
+        // 정적함수?
+        public override void Enter() 
+        {
+            Console.Clear();
+            Console.WriteLine("퀴퀴한 냄새가 나는 '실험실'이다.");
+            Thread.Sleep(2000);
+        }
+        public override void Render() 
+        {
+            Console.Clear();
+            Console.WriteLine("다른 방으로 이동합니다.");
+            Console.WriteLine("1. 복도");
+            Console.Write("선택 :");
+        }
+        public override void Input() 
+        {
+            input = Console.ReadLine();
+        }
+        public override void Update() 
+        {
+            switch (input) 
+            {
+                case "1":
+                    game.ChangeScene(SceneType.Hallway); break;
+            }
+        }
+        public override void Exit() { }
     }
 }

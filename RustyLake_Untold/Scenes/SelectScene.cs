@@ -10,5 +10,6 @@ namespace RustyLake_Untold.Scenes
     // 혹시 모를 경우를 대비해서 일단 보류
     internal class SelectScene
     {
+
     }
 }

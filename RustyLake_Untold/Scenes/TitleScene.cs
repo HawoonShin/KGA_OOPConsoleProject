@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using RustyLake_Untold.Scenes;
 
 namespace RustyLake_Untold.Scenes
 {
@@ -13,15 +14,20 @@ namespace RustyLake_Untold.Scenes
         {
         }
 
+
         public override void Enter()
         {
             // 구현이 필요한가?
         }
 
+        public override void Exit()
+        {
+            
+        }
+
         public override void Input() 
         {
-            //? 왜 난 readkey가 안되는 것인가
-            Console.Readkey();
+            Console.ReadKey();
         }
 
         // 타이틀 출력
