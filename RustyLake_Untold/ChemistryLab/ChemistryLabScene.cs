@@ -38,8 +38,9 @@ namespace RustyLake_Untold.Scenes
         public override void Render() 
         {
             Console.Clear();
-            Console.WriteLine("다른 방으로 이동하시겠습니까?");
-            Console.WriteLine("1. 복도");
+            Console.WriteLine("무엇을 하시겠습니까");
+            Console.WriteLine("1. 조사");
+            Console.WriteLine("2. 복도");
             Console.Write("선택 :");
         }
         public override void Input() 
@@ -50,7 +51,7 @@ namespace RustyLake_Untold.Scenes
         {
             switch(input)
             {
-                case "1":
+                case "2":
                     game.ChangeScene(SceneType.Hallway);break;
             }
         }
