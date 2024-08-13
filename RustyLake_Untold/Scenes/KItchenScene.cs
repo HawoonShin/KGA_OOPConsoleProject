@@ -28,6 +28,12 @@ namespace RustyLake_Untold.Scenes
     //아이스박스
     // 코드는 cold (실험실에서 힌트 입수)(아이템말고 코드입력으로)
     // 얼음 입수
+
+    //전화기
+    // 전원 복원시 사용가능
+    // 사무실의 번호로 전화 가능
+    // 그때 3141 코드 주어짐(사무실 컴퓨터에 사용)
+
     internal class KitchenScene : Scene
     {
         // 복도와 연결

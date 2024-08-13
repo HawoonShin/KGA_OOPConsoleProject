@@ -6,7 +6,9 @@
     //다른 배열들은 당장에 필요하진 않고 일단은 장면별(맵별) 내용들 추가
     public enum SceneType
     {
-        Title, Select, Bedroom, Hallway, Kitchen,
+        Title, Select,
+        Bedroom, BedroomFind,
+        Hallway, Kitchen,Inventory,
         ChemistryLab, ElectricalRoom, Office, HiddenRoom,Ending,
             Size //이거 넣으면 앞쪽에 size 오류 해결되나?
     }

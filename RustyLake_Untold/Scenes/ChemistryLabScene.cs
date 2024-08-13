@@ -14,6 +14,10 @@ namespace RustyLake_Untold.Scenes
     //(사무실에 지문인식기에 사용)
     
     //실험 내용 아이템4개를 모아오고 가열할 경우 손 생성
+    //물 (부엌에서)
+    // 커피(부엌에서)
+    // 산성액(전기실)
+    // 얼음(아이스박스:부엌)
 
     public class ChemistryLabScene : Scene
     {

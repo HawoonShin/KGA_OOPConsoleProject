@@ -1,4 +1,6 @@
-﻿namespace RustyLake_Untold.Scenes
+﻿using RustyLake_Untold.Scenes;
+
+namespace RustyLake_Untold.Bedroom
 {
     // 침실
     public class BedroomScene : Scene
@@ -7,26 +9,9 @@
         //퍼즐을 풀면 복도로 연결
         // 특수 상황에 따라 히든 룸으로 연결
 
-        //침대에 힌트 1-1
-        //서랍 2째칸에 1-2
-        //러그 밑 숨겨진 공간에 힌트
-        
-        //서랍 1째칸에 힌트들로 비밀번호 입력
-        // 입력 후 열쇠로 문 열수 있음
-
-        //아래는 비 필수 요소
-        // 카메라 
-        // 전등 스위치 
-        
         //히든룸 조건
         //통풍구를 드라이버 소지시 열수 있다.
-        //미로는 생략
-        
-        //아이템 창 만들때
-        //prevScene을 하나 생성해서
-        //curscene을 저장해뒀다가 아이템 확인 후 다시 원래 신으로 돌아오는 방식
-
-
+        //미로는 다른거 다 구현하면 만들도록
 
         private string input;
 
@@ -50,9 +35,9 @@
 
         public override void Exit()
         {
-            Console.Clear();
-            Console.WriteLine("나가는 중입니다...");
-            Thread.Sleep(2000);
+            // Console.Clear();
+            // Console.WriteLine("나가는 중입니다...");
+            // Thread.Sleep(2000);
         }
 
         public override void Input()
@@ -62,9 +47,13 @@
 
         public override void Render()
         {
-            Console.Clear();
-            Console.WriteLine("이동 하시겠습니까?");
-            Console.WriteLine("1. 문을 열고 나간다");
+            Console.WriteLine("========================");
+            Console.WriteLine("무엇을 하시겠습니까?");
+            Console.WriteLine();
+            Console.WriteLine("0. 아이템을 확인한다.");
+            Console.WriteLine("1. 주변을 조사한다");
+           // Console.WriteLine("2. 문을 열고 나간다");
+            Console.WriteLine("========================");
             Console.Write("선택 :");
         }
 
@@ -72,9 +61,17 @@
         {
             switch (input)
             {
+                case "0":
+                    Console.WriteLine("인벤토리를 확인합니다.");
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
                 case "1":
-                    game.ChangeScene(SceneType.Hallway); break;
+                    Console.Clear();
+                    Console.WriteLine("조사합니다."); 
+                    game.ChangeScene(SceneType.BedroomFind); break;
                 case "2":
+                    game.ChangeScene(SceneType.Hallway); break;
+                case "3":
                     game.ChangeScene(SceneType.HiddenRoom); break;
 
             }

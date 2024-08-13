@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RustyLake_Untold.Scenes;
+using RustyLake_Untold.Bedroom;
 
 namespace RustyLake_Untold
 {
@@ -58,15 +59,18 @@ namespace RustyLake_Untold
             //scenes[(int)SceneType.이동장소] = new 이동장소Scene(this);
             //scenes[(int)SceneType.Select] = new SelectScene(this);
             scenes[(int)SceneType.Title] = new TitleScene(this);
+
             scenes[(int)SceneType.Bedroom] = new BedroomScene(this);
+            scenes[(int)SceneType.BedroomFind] = new BedroomFind(this);
+
             scenes[(int)SceneType.ChemistryLab] = new ChemistryLabScene(this);
             scenes[(int)SceneType.Hallway] = new HallwayScene(this);
             scenes[(int)SceneType.ElectricalRoom] = new ElectricalRoomScene(this);
-            scenes[(int)SceneType.Ending] = new EndingScene(this);
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
             scenes[(int)SceneType.Kitchen] = new KitchenScene(this);
             scenes[(int)SceneType.Office] = new OfficeScene(this);
             scenes[(int)SceneType.Inventory] = new InventoryScene(this);
+            scenes[(int)SceneType.Ending] = new EndingScene(this);
 
             // 현재 장면의 선택 및 입장? 출현?
             curScene = scenes[(int)SceneType.Title];
