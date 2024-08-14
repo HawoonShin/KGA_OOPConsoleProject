@@ -12,7 +12,6 @@ namespace RustyLake_Untold.Kitchen
             //  this.game = game;
         }
 
-        // 정적함수?
         public override void Enter()
         {
             Console.Clear();
@@ -30,6 +29,8 @@ namespace RustyLake_Untold.Kitchen
             Console.WriteLine("5. 아이스박스");
             Console.WriteLine("6. 전화기");
             Console.WriteLine("=======================");
+            Console.WriteLine("0. 인벤토리 확인");
+            Console.WriteLine("9. 뒤로가기");
             Console.Write("선택 :");
         }
 
@@ -101,6 +102,12 @@ namespace RustyLake_Untold.Kitchen
                     // 그때 3141 코드 주어짐(사무실 컴퓨터에 사용)
                     Console.WriteLine("전원이 들어오지 않아서일까");
                     Console.WriteLine("전화기는 반응이 없습니다.");
+                    break;
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.Kitchen);
                     break;
             }
         }

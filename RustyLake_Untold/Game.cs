@@ -19,6 +19,8 @@ namespace RustyLake_Untold
     {
         private bool isRunning;
 
+        public List<T> Inventory = new List<T>;
+
         private Scene[] scenes;
         private Scene curScene;
         public Scene CurScene { get { return curScene; } }

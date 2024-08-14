@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RustyLake_Untold.Scenes
 {
-    internal class InventoryScene : Scene
+    internal class InventoryScene
     {
         //아이템 창 만들때
         //prevScene을 하나 생성해서
@@ -14,22 +14,26 @@ namespace RustyLake_Untold.Scenes
         //
         //protected Game game;
         // 이쪽은 인벤을 확인하는 용도
+        
 
-        public InventoryScene(Game game) : base(game) 
+        public InventoryScene(Game game) 
         {
             //this.game = game;
         }
 
-        // 정적함수?
-        public override void Enter() { }
-        public override void Render() 
+        //아이템 추가
+        public void Add(item)
         {
-            Console.WriteLine("");
-            //현재 소지 아이템 확인
-            // 뒤로가기
+            Game.Inventory.Add(item);
         }
-        public override void Input() { }
-        public override void Update() { }
-        public override void Exit() { }
+
+        //아이템 제거 
+        public void Remove() { }
+        
+        //인벤토리 확인하는 함수
+        public void InventoryCheck() { }
+
+        //아이템 특정 아이템 확인
+        public void ItemCheck() { }
     }
 }

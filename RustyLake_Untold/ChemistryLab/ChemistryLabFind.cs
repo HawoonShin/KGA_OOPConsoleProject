@@ -27,7 +27,10 @@ namespace RustyLake_Untold.ChemistryLab
             Console.WriteLine("조사할 대상을 선택해 주세요");
             Console.WriteLine("1. 화학 테이블 ");
             Console.WriteLine("2. 화학 테이블 서랍");
-            Console.WriteLine("2. 작은 환풍구");
+            Console.WriteLine("3. 작은 환풍구");
+            Console.WriteLine("0. 인벤토리 확인");
+            Console.WriteLine("9. 뒤로 돌아가기");
+
         }
         public override void Input() 
         {

@@ -30,8 +30,9 @@ namespace RustyLake_Untold.Office
         public override void Render()
         {
             Console.Clear();
-            Console.WriteLine("다시 이전으로 돌아갑니다.");
-            Console.WriteLine("1. 복도");
+            Console.WriteLine("행동선택.");
+            Console.WriteLine("1. 조사");
+            Console.WriteLine("2. 복도");
             Console.Write("선택 :");
         }
         public override void Input()
@@ -43,6 +44,8 @@ namespace RustyLake_Untold.Office
             switch (input)
             {
                 case "1":
+                    game.ChangeScene(SceneType.OfficeFind); break;
+                case "2":
                     game.ChangeScene(SceneType.Hallway); break;
             }
         }

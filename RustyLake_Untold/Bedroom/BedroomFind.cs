@@ -27,6 +27,7 @@ namespace RustyLake_Untold.Bedroom
         }
         public override void Render()
         {
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine("==============================");
             Console.WriteLine("무엇을 조사하겠습니까?");
@@ -38,6 +39,7 @@ namespace RustyLake_Untold.Bedroom
             Console.WriteLine("6. 러그");
             Console.WriteLine("==============================");
             Console.WriteLine("0. 인벤토리");
+            Console.WriteLine("9. 방으로 돌아간다");
             Console.WriteLine("==============================");
             Console.Write("선택 :");
 
@@ -58,7 +60,7 @@ namespace RustyLake_Untold.Bedroom
                     break;
                 //문
                 case "2":
-                    //if 열쇠가 있을 경우
+                    //if (inventory =  열쇠 확인)
                     // 열림
                     // 없을 경우
                     Console.WriteLine("열쇠로 열리는 문같다.");
@@ -77,7 +79,7 @@ namespace RustyLake_Untold.Bedroom
                     Thread.Sleep(1000);
                     break;
                 // 카메라 
-                case "5": 
+                case "5":
                     Console.WriteLine("cctv는 조용히 천장에 매달려 있습니다.");
                     Thread.Sleep(1000);
                     Console.WriteLine("어쩐지 기분나쁜 시선이 느껴지는 것 같습니다.");
@@ -96,6 +98,9 @@ namespace RustyLake_Untold.Bedroom
                     break;
                 case "0":
                     game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.Bedroom);
                     break;
             }
         }

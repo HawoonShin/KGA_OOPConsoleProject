@@ -41,6 +41,8 @@ namespace RustyLake_Untold.ChemistryLab
         {
             switch (input)
             {
+                case "1":
+                    game.ChangeScene(SceneType.ChemistryLabFind); break;
                 case "2":
                     game.ChangeScene(SceneType.Hallway); break;
             }

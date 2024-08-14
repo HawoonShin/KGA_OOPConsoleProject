@@ -29,6 +29,8 @@ namespace RustyLake_Untold.Office
             Console.WriteLine("1. 텍스트 파일");
             Console.WriteLine("2. 카메라 아이콘");
             Console.WriteLine("=======================");
+            Console.WriteLine("0. 아이템 확인");
+            Console.WriteLine("9. 뒤로 가기");
             Console.Write("선택 :");
         }
         public override void Input() 
@@ -51,6 +53,12 @@ namespace RustyLake_Untold.Office
                     Console.WriteLine("그러자 화면에는 4개의 장면이 보였습니다.");
                     Console.WriteLine("3개의 화면은 각각 침실, 주방, 화학 실험실이었고,");
                     Console.WriteLine("1개의 화면은 당신이 전혀 가보지 못한 곳이 비춥니다.");
+                    break;
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.OfficeFind);
                     break;
             }
         }

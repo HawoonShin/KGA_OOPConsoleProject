@@ -29,6 +29,8 @@ namespace RustyLake_Untold.ElectricalRoom
             Console.WriteLine("4. 환풍구");
             Console.WriteLine("5. 땅의 얼룩");
             Console.WriteLine("=================");
+            Console.WriteLine("0. 인벤토리 확인");
+            Console.WriteLine("9. 뒤로가기");
             Console.Write("선택 :");
         }
         public override void Input() 
@@ -77,6 +79,12 @@ namespace RustyLake_Untold.ElectricalRoom
                 case "5":
                     Console.WriteLine("바닥은 어쩐지 부식된것 같은 얼룩이 있다.");
                     Console.WriteLine("고개를 든 당신은 그 위가 파이프 인 것을 발견한다.");
+                    break;
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.Bedroom);
                     break;
             }
         }

@@ -20,6 +20,8 @@ namespace RustyLake_Untold.Office
             Console.WriteLine("3. 책장");
             Console.WriteLine("4. 포스터");
             Console.WriteLine("==========================");
+            Console.WriteLine("0. 인벤토리 확인");
+            Console.WriteLine("9. 뒤로가기");
             Console.Write("선택 :");
         }
         public override void Input() { }
@@ -64,6 +66,12 @@ namespace RustyLake_Untold.Office
                     Console.WriteLine("포스터는 Rusty Lake 라는 휴양지에 대해 쓰여있습니다.");
                     Console.WriteLine("전화 번호도 쓰여 있습니다.");
                     Console.WriteLine("Call : 099174190");
+                    break;
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.Bedroom);
                     break;
             }
         }

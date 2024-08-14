@@ -30,7 +30,8 @@ namespace RustyLake_Untold.ElectricalRoom
         {
             Console.Clear();
             Console.WriteLine("다른 방으로 이동합니다.");
-            Console.WriteLine("1. 복도");
+            Console.WriteLine("1. 조사");
+            Console.WriteLine("2. 복도");
             Console.Write("선택 :");
         }
         public override void Input()
@@ -42,6 +43,8 @@ namespace RustyLake_Untold.ElectricalRoom
             switch (input)
             {
                 case "1":
+                    game.ChangeScene(SceneType.ElectricalRoomFind); break; 
+                case "2":
                     game.ChangeScene(SceneType.Hallway); break;
             }
         }
