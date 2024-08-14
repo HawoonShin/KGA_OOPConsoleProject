@@ -49,10 +49,10 @@ namespace RustyLake_Untold
         }
 
         //게임오버 출력 (보류) 당장의 게임오버가 필요하지 않는다
-        /*public void Over()
+        public void Over()
         {
             isRunning = false;
-        }*/
+        }
 
         // 게임 시작
         private void Start()
@@ -85,6 +85,7 @@ namespace RustyLake_Untold
 
 
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
+            scenes[(int)SceneType.HiddenRoomFind] = new HiddenRoomFind(this);
 
             scenes[(int)SceneType.Inventory] = new InventoryScene(this);
             scenes[(int)SceneType.Ending] = new EndingScene(this);

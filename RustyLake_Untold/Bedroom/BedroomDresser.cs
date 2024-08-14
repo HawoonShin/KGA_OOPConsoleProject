@@ -8,29 +8,34 @@ namespace RustyLake_Untold.Bedroom
         private string input;
         //private string input2;
 
+
         public BedroomDresser(Game game) : base(game)
         {
             //this.game = game;
+            Item bedroomKey = new Item(this);
+            bedroomKey.id = 1;
+            bedroomKey.name = "침실 열쇠";
+            bedroomKey.description = "침실문을 열수 있는 작은 열쇠";
         }
 
         // 정적함수?
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("작고 소박한 나무로 만든 옷장입니다.");
+            Console.WriteLine(" 작고 소박한 나무로 만든 옷장입니다.");
             Thread.Sleep(1000);
-            Console.WriteLine("옷장에는 3개의 서랍장이 있습니다.");
+            Console.WriteLine(" 옷장에는 3개의 서랍장이 있습니다.");
             Thread.Sleep(1000);
         }
         public override void Render()
         {
             Console.WriteLine();
-            Console.WriteLine("========================");
-            Console.WriteLine("어느 서랍장을 조사하겠습니까?");
-            Console.WriteLine("1번째 서랍장");
-            Console.WriteLine("2번째 서랍장");
-            Console.WriteLine("3번째 서랍장");
-            Console.WriteLine("========================");
+            Console.WriteLine("============================");
+            Console.WriteLine(" 어느 서랍장을 조사하겠습니까?");
+            Console.WriteLine(" 1번째 서랍장");
+            Console.WriteLine(" 2번째 서랍장");
+            Console.WriteLine(" 3번째 서랍장");
+            Console.WriteLine("============================");
             Console.Write("선택 :");
         }
         public override void Input()

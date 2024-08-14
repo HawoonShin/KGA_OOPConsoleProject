@@ -6,11 +6,10 @@
     //다른 배열들은 당장에 필요하진 않고 일단은 장면별(맵별) 내용들 추가
     public enum SceneType
     {
-        Title, Select,
+        Title, Select, Inventory,
         Bedroom, BedroomFind, BedroomDresser,
         Hallway,
         Kitchen, KitchenFind,
-        Inventory,
         ChemistryLab, ChemistryLabFind,
         ElectricalRoom, ElectricalRoomFind,
         Office, OfficeFind, OfficeComputer,

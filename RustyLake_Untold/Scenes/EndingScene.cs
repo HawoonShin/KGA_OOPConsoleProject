@@ -33,6 +33,9 @@ namespace RustyLake_Untold.Scenes
         { 
             
         }
-        public override void Exit() { }
+        public override void Exit() 
+        {
+            game.Over(); //게임 오버
+        }
     }
 }

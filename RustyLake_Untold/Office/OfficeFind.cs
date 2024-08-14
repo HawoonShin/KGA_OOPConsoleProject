@@ -47,7 +47,7 @@ namespace RustyLake_Untold.Office
                     int.TryParse(Console.ReadLine(), out int password);
                     if (password == 3141)
                     {
-                        //game.ChangeScene(SceneType.)
+                        game.ChangeScene(SceneType.OfficeComputer);
                     }
                     else { Console.WriteLine("암호가 틀렸다고 화면에 출력됩니다."); }
                     break;
@@ -61,7 +61,9 @@ namespace RustyLake_Untold.Office
                 case "4": 
                     // 번호 확인 가능(전화 용도)
                     Console.WriteLine("벽에 포스터가 걸려있습니다.");
-                    Console.WriteLine();
+                    Console.WriteLine("포스터는 Rusty Lake 라는 휴양지에 대해 쓰여있습니다.");
+                    Console.WriteLine("전화 번호도 쓰여 있습니다.");
+                    Console.WriteLine("Call : 099174190");
                     break;
             }
         }
