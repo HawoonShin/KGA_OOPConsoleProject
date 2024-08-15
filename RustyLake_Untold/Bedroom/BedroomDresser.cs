@@ -1,24 +1,23 @@
 ﻿using RustyLake_Untold.Scenes;
 
+
 namespace RustyLake_Untold.Bedroom
 {
     internal class BedroomDresser : Scene
     {
-        //protected Game game;
         private string input;
-        //private string input2;
-
+        
+        Inventory inventory = new Inventory();
 
         public BedroomDresser(Game game) : base(game)
         {
             //this.game = game;
-            Item bedroomKey = new Item(this);
-            bedroomKey.id = 1;
-            bedroomKey.name = "침실 열쇠";
-            bedroomKey.description = "침실문을 열수 있는 작은 열쇠";
+
+            
+
+
         }
 
-        // 정적함수?
         public override void Enter()
         {
             Console.Clear();
@@ -36,6 +35,10 @@ namespace RustyLake_Untold.Bedroom
             Console.WriteLine(" 2번째 서랍장");
             Console.WriteLine(" 3번째 서랍장");
             Console.WriteLine("============================");
+            Console.WriteLine(" 0. 인벤토리 확인");
+            Console.WriteLine(" 9. 조사로 돌아간다");
+            Console.WriteLine("============================");
+
             Console.Write("선택 :");
         }
         public override void Input()
@@ -53,7 +56,12 @@ namespace RustyLake_Untold.Bedroom
                     int.TryParse(Console.ReadLine(), out int input2);
                     if (input2 == 0000)
                     {
-                        // 인벤토리에 열쇠 추가
+                        Item bedroomKey = new Item(this);
+                        bedroomKey.id = 1;
+                        bedroomKey.name = "침실 열쇠";
+                        bedroomKey.description = "침실문을 열수 있는 작은 열쇠";
+
+                        inventory.Add(bedroomKey);
                         Console.WriteLine("열쇠를 발견하였습니다.");
                     }
                     else
@@ -71,8 +79,22 @@ namespace RustyLake_Untold.Bedroom
                 //서랍 3째칸에 손전등
                 case "3":
                     //손전등 아이템에 추가할 것
+
+                    Item fleshright = new Item(this);
+                    fleshright.id = 2;
+                    fleshright.name = "손전등";
+                    fleshright.name = "어두운 곳을 밝힐 수 있는 손전등이다.";
+                    inventory.Add(fleshright);
+
                     Console.WriteLine("손전등을 발견하였습니다.");
                     break;
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.BedroomFind);
+                    break;
+
             }
         }
         public override void Exit() { }

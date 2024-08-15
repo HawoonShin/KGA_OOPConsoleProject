@@ -17,7 +17,6 @@ namespace RustyLake_Untold.ChemistryLab
             //this.game = game;
         }
 
-        // 정적함수?
         public override void Enter() 
         {
             Console.WriteLine("여러가지 화학장비가 늘어진 작업대가 있습니다.");
@@ -70,6 +69,13 @@ namespace RustyLake_Untold.ChemistryLab
                     Console.WriteLine("깜짝 놀란 당신은 뒤로 넘어집니다.");
                     Console.WriteLine("부스럭 거리는 소리에 당신은 다시 확인해보았지만");
                     Console.WriteLine("그곳에는 아무도 없습니다.");
+                    break;
+
+                case "0":
+                    game.ChangeScene(SceneType.Inventory);
+                    break;
+                case "9":
+                    game.ChangeScene(SceneType.ChemistryLab);
                     break;
             }
 

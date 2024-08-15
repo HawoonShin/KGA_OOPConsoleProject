@@ -14,7 +14,7 @@ namespace RustyLake_Untold.HiddenRoom
 
         }
 
-        // 정적함수?
+       
         public override void Enter()
         {
             Console.Clear();

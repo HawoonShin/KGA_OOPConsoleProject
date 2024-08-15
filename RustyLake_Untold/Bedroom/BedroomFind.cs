@@ -1,5 +1,6 @@
 ﻿using RustyLake_Untold.Scenes;
 
+
 namespace RustyLake_Untold.Bedroom
 {
     internal class BedroomFind : Scene
@@ -7,12 +8,13 @@ namespace RustyLake_Untold.Bedroom
         //protected Game game;
         private string input;
 
+        Inventory inventory; 
+
         public BedroomFind(Game game) : base(game)
         {
             //this.game = game;
         }
 
-        // 정적함수?
         public override void Enter()
         {
             Console.Clear();
@@ -50,6 +52,7 @@ namespace RustyLake_Untold.Bedroom
         }
         public override void Update()
         {
+
             switch (input)
             {
                 //침대에 힌트 1-1
@@ -90,6 +93,7 @@ namespace RustyLake_Untold.Bedroom
                 //러그
                 case "6":
                     //if손전등이 있을 경우 힌트제공
+                    if (inventory.fleshright == true) { }
                     //없을 경우 
                     Console.WriteLine("밑 쪽에 공간을 발견합니다!");
                     Thread.Sleep(1000);

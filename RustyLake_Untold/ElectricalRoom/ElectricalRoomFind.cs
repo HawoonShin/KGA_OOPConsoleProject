@@ -17,7 +17,7 @@ namespace RustyLake_Untold.ElectricalRoom
             //this.game = game;
         }
 
-        // 정적함수?
+   
         public override void Enter() { }
         public override void Render() 
         {
@@ -84,7 +84,7 @@ namespace RustyLake_Untold.ElectricalRoom
                     game.ChangeScene(SceneType.Inventory);
                     break;
                 case "9":
-                    game.ChangeScene(SceneType.Bedroom);
+                    game.ChangeScene(SceneType.ElectricalRoom);
                     break;
             }
         }

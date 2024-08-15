@@ -15,7 +15,6 @@ namespace RustyLake_Untold.Office
             //this.game = game;
         }
 
-        // 정적함수?
         public override void Enter() 
         {
             Console.WriteLine("컴퓨터의 암호가 해제 되었습니다.");

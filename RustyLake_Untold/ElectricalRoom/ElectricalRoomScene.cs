@@ -19,7 +19,7 @@ namespace RustyLake_Untold.ElectricalRoom
 
         }
 
-        // 정적함수?
+     
         public override void Enter()
         {
             Console.Clear();

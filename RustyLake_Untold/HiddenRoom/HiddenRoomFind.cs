@@ -10,7 +10,7 @@ namespace RustyLake_Untold.HiddenRoom
             // this.game = game;
         }
 
-        // 정적함수?
+   
         public override void Enter() { }
         public override void Render()
         {

@@ -18,7 +18,6 @@ namespace RustyLake_Untold.ChemistryLab
 
         }
 
-        // 정적함수?
         public override void Enter()
         {
             Console.Clear();

@@ -19,7 +19,7 @@ namespace RustyLake_Untold
     {
         private bool isRunning;
 
-        public List<T> Inventory = new List<T>;
+        public List<Item> inventory = new List<Item>();
 
         private Scene[] scenes;
         private Scene curScene;
@@ -89,7 +89,7 @@ namespace RustyLake_Untold
             scenes[(int)SceneType.HiddenRoom] = new HiddenRoomScene(this);
             scenes[(int)SceneType.HiddenRoomFind] = new HiddenRoomFind(this);
 
-            scenes[(int)SceneType.Inventory] = new InventoryScene(this);
+            //scenes[(int)SceneType.Inventory] = new InventoryScene(this);
             scenes[(int)SceneType.Ending] = new EndingScene(this);
 
             // 현재 장면의 선택 및 입장? 출현?
