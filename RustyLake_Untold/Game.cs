@@ -19,7 +19,13 @@ namespace RustyLake_Untold
     {
         private bool isRunning;
 
-        public List<Item> inventory = new List<Item>();
+        // 인스턴스 생성!
+        //public List<Inventory> inventory = new List<Inventory>();
+        public Inventory inventory = new Inventory();
+        // 아이템 인스턴스 생성?
+        // public Item Item { get; set; }
+
+
 
         private Scene[] scenes;
         private Scene curScene;

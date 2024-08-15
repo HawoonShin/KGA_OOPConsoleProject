@@ -3,7 +3,7 @@
 
 namespace RustyLake_Untold.Bedroom
 {
-    internal class BedroomFind : Scene
+    public class BedroomFind : Scene
     {
         //protected Game game;
         private string input;
@@ -93,12 +93,19 @@ namespace RustyLake_Untold.Bedroom
                 //러그
                 case "6":
                     //if손전등이 있을 경우 힌트제공
-                    if (inventory.fleshright == true) { }
+                    if (game.inventory.ItemCheck("fleshright") == true)
+                    {
+                        Console.WriteLine("아이템 사용함");
+                    }
+
                     //없을 경우 
+                    else
+                    {
                     Console.WriteLine("밑 쪽에 공간을 발견합니다!");
                     Thread.Sleep(1000);
                     Console.WriteLine("하지만 너무 어두워서 무언가 필요할 것 같습니다.");
                     Thread.Sleep(1000);
+                    }
                     break;
                 case "0":
                     game.ChangeScene(SceneType.Inventory);

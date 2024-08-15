@@ -3,17 +3,19 @@
 
 namespace RustyLake_Untold.Bedroom
 {
-    internal class BedroomDresser : Scene
+    public class BedroomDresser : Scene
     {
         private string input;
-        
-        Inventory inventory = new Inventory();
+
+        Inventory inventory;
+        Item Item;
 
         public BedroomDresser(Game game) : base(game)
         {
             //this.game = game;
 
             
+
 
 
         }
@@ -61,7 +63,7 @@ namespace RustyLake_Untold.Bedroom
                         bedroomKey.name = "침실 열쇠";
                         bedroomKey.description = "침실문을 열수 있는 작은 열쇠";
 
-                        inventory.Add(bedroomKey);
+                        game.inventory.Add(bedroomKey);
                         Console.WriteLine("열쇠를 발견하였습니다.");
                     }
                     else
@@ -84,7 +86,8 @@ namespace RustyLake_Untold.Bedroom
                     fleshright.id = 2;
                     fleshright.name = "손전등";
                     fleshright.name = "어두운 곳을 밝힐 수 있는 손전등이다.";
-                    inventory.Add(fleshright);
+
+                    game.inventory.Add(fleshright);
 
                     Console.WriteLine("손전등을 발견하였습니다.");
                     break;

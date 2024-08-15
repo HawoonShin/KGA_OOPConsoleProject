@@ -19,6 +19,7 @@ namespace RustyLake_Untold
         {
             //this.game = scene.game;
             //this.scene = scene;
+
         }
     }
 }
