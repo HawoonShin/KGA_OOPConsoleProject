@@ -54,9 +54,9 @@ namespace RustyLake_Untold.Bedroom
                 //서랍 1째칸에 힌트들로 비밀번호 입력
                 case "1":
                     Console.WriteLine("서랍장은 비밀번호로 잠겨 있습니다.");
-                    Console.Write("비밀번호 입력 :(제작용 임시비번 0000)");
+                    Console.Write("비밀번호 입력 :(제작용 번호 26773)");
                     int.TryParse(Console.ReadLine(), out int input2);
-                    if (input2 == 0000)
+                    if (input2 == 26773)
                     {
                         Item bedroomKey = new Item(this);
                         bedroomKey.id = 1;
@@ -75,6 +75,13 @@ namespace RustyLake_Untold.Bedroom
                 //서랍 2째칸에 1-2
                 case "2":
                     //힌트 아이템 추가할것
+                    Item hint1 = new Item(this);
+                    hint1.id = 3;
+                    hint1.name = "힌트가 적힌 종이";
+                    hint1.description = "\"73\"이라고 적힌 종이다.";
+
+                    game.inventory.Add(hint1);
+
                     Console.WriteLine("힌트를 발견하였습니다.");
                     break;
 

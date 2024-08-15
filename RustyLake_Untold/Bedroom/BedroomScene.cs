@@ -52,7 +52,7 @@ namespace RustyLake_Untold.Bedroom
             Console.WriteLine();
             Console.WriteLine("0. 아이템을 확인한다.");
             Console.WriteLine("1. 주변을 조사한다");
-           // Console.WriteLine("2. 문을 열고 나간다");
+            Console.WriteLine("2. 문을 열고 나간다");
             Console.WriteLine("========================");
             Console.Write("선택 :");
         }
@@ -67,10 +67,18 @@ namespace RustyLake_Untold.Bedroom
                     break;
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("조사합니다."); 
+                    Console.WriteLine("조사합니다.");
                     game.ChangeScene(SceneType.BedroomFind); break;
                 case "2":
-                    game.ChangeScene(SceneType.Hallway); break;
+                    if (game.inventory.ItemCheck("침실 열쇠") == true)
+                    {
+                    game.ChangeScene(SceneType.Hallway);
+                    }
+                    else
+                    {
+                        Console.WriteLine("열쇠가 없는 당신은 문을 열지 못합니다.");
+                    }
+                        break;
                 case "3":
                     game.ChangeScene(SceneType.HiddenRoom); break;
 

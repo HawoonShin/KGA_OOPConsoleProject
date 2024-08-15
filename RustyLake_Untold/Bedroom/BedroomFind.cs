@@ -8,7 +8,7 @@ namespace RustyLake_Untold.Bedroom
         //protected Game game;
         private string input;
 
-        Inventory inventory; 
+        Inventory inventory;
 
         public BedroomFind(Game game) : base(game)
         {
@@ -58,16 +58,29 @@ namespace RustyLake_Untold.Bedroom
                 //침대에 힌트 1-1
                 case "1":
                     // 힌트1-1 아이템 생성 추가할 것
+                    Item hint2 = new Item(this);
+                    hint2.id = 4;
+                    hint2.name = "힌트가 적힌 종이2";
+                    hint2.description = "\"267\"이라고 적힌 종이다.";
+
+                    game.inventory.Add(hint2);
+
                     Console.WriteLine("힌트1을 찾았다!");
                     Console.WriteLine("(아이템은 이벤토리에서 확인 가능합니다.)");
                     break;
                 //문
                 case "2":
-                    //if (inventory =  열쇠 확인)
-                    // 열림
-                    // 없을 경우
+                    if(game.inventory.ItemCheck("침실 열쇠") == true)
+                    {
+                        Console.WriteLine("당신은 열쇠로 이 문을 열수 있을 거 같습니다.");
+                        Console.WriteLine("(조사 화면을 나가서 열쇠를 사용해 주세요.)");
+                    }
+                    else
+                    {
                     Console.WriteLine("열쇠로 열리는 문같다.");
                     Console.WriteLine("열쇠를 찾아보자.");
+
+                    }
                     break;
                 case "3":
                     game.ChangeScene(SceneType.BedroomDresser);
@@ -75,11 +88,22 @@ namespace RustyLake_Untold.Bedroom
                 //환풍구
                 case "4":
                     //드라이버 소지시 오픈가능
-                    //안쪽은 미로
+                    if (game.inventory.ItemCheck("드라이버") == true)
+                    {
+                        //안쪽은 미로
+                        Console.WriteLine("당신은 드라이버로 환풍구를 열었습니다.");
+                        Console.WriteLine("어둡고 먼지가 가득한 공간입니다.");
+                        Console.WriteLine("당신은 감각에 의지하며 앞으로 기어 나갑니다.");
+                        game.ChangeScene(SceneType.HiddenRoom);
+
+                    }
+                    else 
+                    {
                     Console.WriteLine("환풍구는 사람이 들어갈 정도로 입구가 커 보입니다.");
                     Thread.Sleep(1000);
                     Console.WriteLine("하지만 지금은 할 수 있는게 없습니다.");
                     Thread.Sleep(1000);
+                    }
                     break;
                 // 카메라 
                 case "5":
@@ -93,18 +117,21 @@ namespace RustyLake_Untold.Bedroom
                 //러그
                 case "6":
                     //if손전등이 있을 경우 힌트제공
-                    if (game.inventory.ItemCheck("fleshright") == true)
+                    //원래는 힌트를 주는 공간이었지만 임시로 스토리에 연관된 문구 출력
+                    if (game.inventory.ItemCheck("손전등") == true)
                     {
-                        Console.WriteLine("아이템 사용함");
+                        Console.WriteLine(" 당신은 가지고 있던 손정등으로 아래를 비추어 봅니다.");
+                        Console.WriteLine(" 아래를 비추자 어떠한 문구가 보입니다.");
+                        Console.WriteLine(" [침대]+[옷장]");
                     }
 
                     //없을 경우 
                     else
                     {
-                    Console.WriteLine("밑 쪽에 공간을 발견합니다!");
-                    Thread.Sleep(1000);
-                    Console.WriteLine("하지만 너무 어두워서 무언가 필요할 것 같습니다.");
-                    Thread.Sleep(1000);
+                        Console.WriteLine("밑 쪽에 공간을 발견합니다!");
+                        Thread.Sleep(1000);
+                        Console.WriteLine("하지만 너무 어두워서 무언가 필요할 것 같습니다.");
+                        Thread.Sleep(1000);
                     }
                     break;
                 case "0":
