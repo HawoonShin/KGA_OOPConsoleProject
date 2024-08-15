@@ -55,10 +55,16 @@ namespace RustyLake_Untold.HiddenRoom
 
                 //빨간버튼
                 case "3":
-                    // 복도와 연결되는 문 생성(보류)
+                    // 복도와 연결되는 문 생성
                     Console.WriteLine("빨간버튼을 누르자 덜컹하는 소리가 들립니다.");
                     Console.WriteLine("방안에 새로운 문이 생겼습니다.");
                     Console.WriteLine("문은 복도와 이어지는것 같습니다.");
+
+                    Item redButton = new Item(this);
+                    redButton.id = 13;
+                    redButton.name = "빨간 버튼";
+                    redButton.description = "왜 내가 버튼을 '갖고' 있는거죠?";
+                    game.inventory.Add(redButton);
                     break;
             }
         }

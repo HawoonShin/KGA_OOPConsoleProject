@@ -14,7 +14,7 @@ namespace RustyLake_Untold.HiddenRoom
 
         }
 
-       
+
         public override void Enter()
         {
             Console.Clear();
@@ -25,7 +25,13 @@ namespace RustyLake_Untold.HiddenRoom
         public override void Render()
         {
             Console.Clear();
-            Console.WriteLine("조건을 만족하면 엔딩으로 연결됩니다.");
+            Console.WriteLine("행동선택.");
+            Console.WriteLine("1. 조사");
+            if (game.inventory.ItemCheck("버튼") == true)
+            {
+                Console.WriteLine("2. 복도");
+            }
+
         }
         public override void Input()
         {
@@ -36,7 +42,11 @@ namespace RustyLake_Untold.HiddenRoom
             switch (input)
             {
                 case "1":
-                    game.ChangeScene(SceneType.Ending);
+                    game.ChangeScene(SceneType.HiddenRoom);
+                    break;
+                case "2":
+                    game.ChangeScene(SceneType.Hallway);
+
                     break;
             }
         }
