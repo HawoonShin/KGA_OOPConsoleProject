@@ -1,9 +1,4 @@
 ﻿using RustyLake_Untold.Scenes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RustyLake_Untold.ChemistryLab
 {
@@ -12,17 +7,17 @@ namespace RustyLake_Untold.ChemistryLab
         protected Game game;
         private string input;
 
-        public ChemistryLabFind(Game game) :base(game)
+        public ChemistryLabFind(Game game) : base(game)
         {
             //this.game = game;
         }
 
-        public override void Enter() 
+        public override void Enter()
         {
             Console.WriteLine("여러가지 화학장비가 늘어진 작업대가 있습니다.");
         }
-        public override void Render() 
-        { 
+        public override void Render()
+        {
             Console.WriteLine("조사할 대상을 선택해 주세요");
             Console.WriteLine("1. 화학 테이블 ");
             Console.WriteLine("2. 화학 테이블 서랍");
@@ -31,9 +26,9 @@ namespace RustyLake_Untold.ChemistryLab
             Console.WriteLine("9. 뒤로 돌아가기");
 
         }
-        public override void Input() 
+        public override void Input()
         {
-            input = Console.ReadLine();   
+            input = Console.ReadLine();
         }
         public override void Update()
         {
@@ -51,8 +46,29 @@ namespace RustyLake_Untold.ChemistryLab
                     //아이템 4개가 있는게 확인이 되면 
                     //실험이 진행된다.
                     //아닐경우 다음같은 메세지 출력
-                    Console.WriteLine("실험 테이블에는 비커와 버너가 있습니다.");
-                    Console.WriteLine("이 도구들을 이용하여 실험을 해야할것 같습니다.");
+                    if (game.inventory.ItemCheck("물") == true &&
+                        game.inventory.ItemCheck("커피") == true &&
+                            game.inventory.ItemCheck("산성액") == true &&
+                        game.inventory.ItemCheck("얼음") == true)
+                    {
+                       Console.WriteLine("당신은 갖고있던 물, 커피, 산성액, 얼음을");
+                       Console.WriteLine("실험서에 적혀있는대로 가열을 하기 시작합니다.");
+                       Console.WriteLine("그것들은 검게 변하기 시작하더니 덩어리 지기 시작합니다.");
+                       Console.WriteLine("덩어리는 점차 형태를 갖기 시작하더니 팔의 형태로 변합니다.");
+                       Console.WriteLine("팔을 얻었습니다.");
+
+                        Item arm = new Item(this);
+                        arm.id = 5;
+                        arm.name = "팔";
+                        arm.description = "팔입니다. \n 어딘가에서 지문인식을 본것도 같습니다.";
+
+                        game.inventory.Add(arm);
+                    }
+                    else
+                    {
+                        Console.WriteLine("실험 테이블에는 비커와 버너가 있습니다.");
+                        Console.WriteLine("이 도구들을 이용하여 실험을 해야할것 같습니다.");
+                    }
                     break;
 
                 case "2":
