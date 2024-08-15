@@ -44,10 +44,19 @@ namespace RustyLake_Untold.ElectricalRoom
                 //퓨즈박스
                 case "1":
                     //퓨즈 아이템을 소지할 경우
-                    //불이 들어온다
+                    if(game.inventory.ItemCheck("퓨즈") == true)
+                    {
+                        //불이 들어온다
+                        Console.WriteLine("퓨즈박스에 작은 스파크가 튑니다.");
+                        Console.WriteLine("곧이어 작은 웅웅소리와 함께 전등이 켜지기 시작합니다.");
+                    }
+
                     //퓨즈가 없을 경우
+                    else
+                    {
                     Console.WriteLine("퓨즈가 하나 빠져 있는 것을 발견합니다.");
                     Console.WriteLine("하지만 넣을 퓨즈가 없습니다");
+                    }
                     break;
 
                 //선반
@@ -55,21 +64,51 @@ namespace RustyLake_Untold.ElectricalRoom
                     //렌치 아이템 습득
                     Console.WriteLine("선반에는 오직 렌치만이 덩그러니 놓여있습니다.");
                     Console.WriteLine("렌치를 얻었습니다.");
+
+                    Item Wrench = new Item(this);
+                    Wrench.id = 6;
+                    Wrench.name = "렌치";
+                    Wrench.description = "단단해 보이는 렌치이다.";
+
+                    game.inventory.Add(Wrench);
                     break;
 
                 //파이프
                 case "3":
                     //아이템에 렌치가 있을 경우
+                    if(game.inventory.ItemCheck("렌치")==true)
+                    {
                     //렌치로 파이프를 때려 산성액 습득
+                    Console.WriteLine("당신은 갖고있던 렌치로 파이프를 때렸습니다.");
+                    Console.WriteLine("파이프의 균열이 더 커지고 그곳에서 산성액이 흘러나옵니다.");
+                    Console.WriteLine("당신은 이 산성액을 챙깁니다.");
+
+                        Item acid = new Item(this);
+                        acid.id = 7;
+                        acid.name = "산성액";
+                        acid.description = "산성액입니다. 약간 이상한 냄새가 납니다.";
+
+                        game.inventory.Add(acid);
+                    }
                     //없을 경우
+                    else 
+                    {
                     Console.WriteLine("파이프에는 금이 가 있습니다.");
                     Console.WriteLine("무언가 단단한걸로 내려 치면 곧 깨질거 같습니다.");
+                    }
                     break;
 
                 //환풍구
                 //퓨즈 발견
                 case "4":
                     //퓨즈 습득
+                    Item fuse = new Item(this);
+                    fuse.id = 8;
+                    fuse.name = "퓨즈";
+                    fuse.description = "퓨즈입니다. 퓨즈박스에서 사용할 수 있을거 같습니다.";
+
+                    game.inventory.Add(fuse);
+
                     Console.WriteLine("당신은 작은 환풍구를 들여다 봅니다.");
                     Console.WriteLine("환풍구 안쪽으로 퓨즈가 보입니다.");
                     Console.WriteLine("손을 뻗어 퓨즈를 얻었습니다.");
