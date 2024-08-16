@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RustyLake_Untold.Scenes
+﻿namespace RustyLake_Untold.Scenes
 {
     // 복도
     internal class HallwayScene : Scene
@@ -17,25 +11,27 @@ namespace RustyLake_Untold.Scenes
         // 사무실
 
         private string input;
-        
+
 
         public HallwayScene(Game game) : base(game)
         {
-           
+
         }
 
         // 정적함수?
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("어둡고 긴 '복도'가 당신의 눈앞에 나타났다.");
+            Console.WriteLine(" 어둡고 긴 '복도'가 당신의 눈앞에 나타났습니다.");
+            Thread.Sleep(2000);
+            Console.WriteLine(" 방은 여러 곳과 연결 된거 같습니다.");
             Thread.Sleep(2000);
 
         }
-        public override void Render() 
+        public override void Render()
         {
             Console.Clear();
-            Console.WriteLine("방은 여러 곳과 연결 된거 같다.");
+            Console.WriteLine("============================");
             Console.WriteLine("어디로 이동하시겠습니까?");
             Console.WriteLine("============================");
             Console.WriteLine("1. 침실");
@@ -43,33 +39,58 @@ namespace RustyLake_Untold.Scenes
             Console.WriteLine("3. 화학 실험실");
             Console.WriteLine("4. 전기실");
             Console.WriteLine("5. 사무실");
+            if (game.inventory.ItemCheck("빨간 버튼") == true)
+            {
+                Console.WriteLine("6. 숨겨진 방");
+            }
             Console.WriteLine("============================");
             Console.Write("선택 : ");
-            
+
         }
         public override void Input()
         {
             input = Console.ReadLine();
         }
-        public override void Update() 
+        public override void Update()
         {
             //각 방문에 관한 세부 묘사 일부 필요
-            switch (input) 
+            switch (input)
             {
                 case "1":
+                    Console.Clear();
+                    Console.WriteLine("침실로 이동합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Bedroom);
                     break;
-                case "2": 
+                case "2":
+                    Console.Clear();
+                    Console.WriteLine("부엌로 이동합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Kitchen);
                     break;
-                case "3": 
+                case "3":
+                    Console.Clear();
+                    Console.WriteLine("화학 실험실로 이동합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.ChemistryLab);
                     break;
-                case "4": 
+                case "4":
+                    Console.Clear();
+                    Console.WriteLine("전기실로 이동합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.ElectricalRoom);
                     break;
-                case "5": 
+                case "5":
+                    Console.Clear();
+                    Console.WriteLine("사무실로 이동합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Office);
+                    break;
+                case "6":
+                    Console.Clear();
+                    Console.WriteLine("숨겨진 방으로 이동합니다.");
+                    Thread.Sleep(2000);
+                    game.ChangeScene(SceneType.HiddenRoom);
                     break;
             }
         }
