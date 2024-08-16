@@ -54,6 +54,7 @@ namespace RustyLake_Untold.Bedroom
             {
                 //서랍 1째칸에 힌트들로 비밀번호 입력
                 case "1":
+                    Console.Clear();
                     Console.WriteLine(" 서랍장은 비밀번호로 잠겨 있습니다.");
                     Thread.Sleep(2000);
                     Console.Write(" 비밀번호 입력 :(제작용 번호 26773)");
@@ -86,6 +87,7 @@ namespace RustyLake_Untold.Bedroom
 
                     game.inventory.Add(hint1);
 
+                    Console.Clear();
                     Console.WriteLine(" 메모를 발견하였습니다.");
                     Thread.Sleep(2000);
                     Console.WriteLine(" 메모에는 [73]이라고 적혀있습니다.");
@@ -103,6 +105,7 @@ namespace RustyLake_Untold.Bedroom
 
                     game.inventory.Add(fleshright);
 
+                    Console.Clear();
                     Console.WriteLine(" 손전등을 발견하였습니다.");
                     Thread.Sleep(2000);
                     break;

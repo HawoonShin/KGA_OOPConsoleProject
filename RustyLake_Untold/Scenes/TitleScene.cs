@@ -28,6 +28,7 @@ namespace RustyLake_Untold.Scenes
             Console.WriteLine(" 당신은 당신이 누구인지, 어디인지 알수없습니다.");
             Thread.Sleep(2000);
             Console.WriteLine(" 무엇이든 기억하려고 노력하던 그때 어떤 목소리가 들립니다.");
+            Thread.Sleep(2000);
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(" It's time to wake up!");
             Console.ResetColor();

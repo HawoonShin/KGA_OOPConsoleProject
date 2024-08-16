@@ -89,11 +89,8 @@ namespace RustyLake_Untold.Bedroom
                         Thread.Sleep(2000);
                     }
                     break;
-                case "3":
-                    game.ChangeScene(SceneType.HiddenRoom); break;
-
-                    //임시 엔딩확인용 다이렉트 루트
-                    case "18":
+                //임시 엔딩확인용 다이렉트 루트
+                case "18":
                     game.ChangeScene(SceneType.Ending); break;
                     break;
 
