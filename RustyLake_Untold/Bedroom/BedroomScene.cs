@@ -53,6 +53,7 @@ namespace RustyLake_Untold.Bedroom
             //Console.WriteLine("0. 아이템을 확인한다.");
             Console.WriteLine("1. 주변을 조사한다");
             Console.WriteLine("2. 문을 열고 나간다");
+            //체크 포인트 만들어서 숨겨진 방을 한번 찍고 오면 선택지가 열리도록
             Console.WriteLine("========================");
             Console.Write("선택 :");
         }

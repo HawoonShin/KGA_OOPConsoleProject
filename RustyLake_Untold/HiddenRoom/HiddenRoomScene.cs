@@ -18,19 +18,26 @@ namespace RustyLake_Untold.HiddenRoom
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("먼지 쌓인 환풍구를 지나오니 숨겨진 방으로 나왔다.");
-            Console.WriteLine("기분 나쁘게 돌아가는 기계가 방에 놓여있다.");
+            Console.WriteLine(" 먼지 쌓인 환풍구를 지나오니 숨겨진 방으로 나왔다.");
+            Thread.Sleep(2000);
+            Console.WriteLine(" 기분 나쁘게 돌아가는 기계가 방에 놓여있다.");
             Thread.Sleep(2000);
         }
         public override void Render()
         {
-            Console.Clear();
-            Console.WriteLine("행동선택.");
-            Console.WriteLine("1. 조사");
+            Console.WriteLine();
+            Console.WriteLine("========================");
+            Console.WriteLine("무엇을 하시겠습니까.");
+            Console.WriteLine("========================");
+            Console.WriteLine("1. 조사한다");
+            Console.WriteLine("2. 침실로 돌아간다");
             if (game.inventory.ItemCheck("버튼") == true)
             {
-                Console.WriteLine("2. 복도");
+            Console.WriteLine("3. 복도로 돌아간다");
+ 
             }
+            Console.WriteLine("========================");
+            Console.Write("선택 :");
 
         }
         public override void Input()
@@ -42,11 +49,22 @@ namespace RustyLake_Untold.HiddenRoom
             switch (input)
             {
                 case "1":
-                    game.ChangeScene(SceneType.HiddenRoom);
+                    Console.Clear();
+                    Console.WriteLine(" 당신은 방을 둘러보기로 결정했습니다..");
+                    Thread.Sleep(2000);
+                    game.ChangeScene(SceneType.HiddenRoomFind);
                     break;
                 case "2":
+                    Console.Clear();
+                    Console.WriteLine(" 침실로 이동합니다.");
+                    Thread.Sleep(2000);
+                    game.ChangeScene(SceneType.Bedroom);
+                    break;
+                case "3":
+                    Console.Clear();
+                    Console.WriteLine(" 당신은 복도로 돌아갑니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Hallway);
-
                     break;
             }
         }
