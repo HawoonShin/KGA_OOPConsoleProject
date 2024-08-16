@@ -50,8 +50,14 @@ namespace RustyLake_Untold.ElectricalRoom
             switch (input)
             {
                 case "1":
+                    Console.Clear();
+                    Console.WriteLine(" 당신은 부엌을 둘러보기로 결정했습니다..");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.ElectricalRoomFind); break; 
                 case "2":
+                    Console.Clear();
+                    Console.WriteLine(" 당신은 복도로 돌아갑니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Hallway); break;
             }
         }
