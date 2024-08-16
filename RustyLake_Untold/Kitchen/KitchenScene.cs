@@ -26,6 +26,7 @@ namespace RustyLake_Untold.Kitchen
         }
         public override void Render()
         {
+            Console.WriteLine();
             Console.WriteLine("========================");
             Console.WriteLine("무엇을 하시겠습니까.");
             Console.WriteLine("========================");

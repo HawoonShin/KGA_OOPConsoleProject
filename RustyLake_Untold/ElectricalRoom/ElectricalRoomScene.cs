@@ -23,15 +23,22 @@ namespace RustyLake_Untold.ElectricalRoom
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("퀴퀴한 냄새가 나는 '실험실'이다.");
+            Console.WriteLine(" 문이 삐걱거리는 소리와 함께 열립니다.");
+            Thread.Sleep(2000);
+            Console.WriteLine(" 문을 열자 알수없는 퀴퀴한 냄새가 풍겨옵니다.");
+            Thread.Sleep(2000);
+            Console.WriteLine(" 방은 전선과 파이프로 어수선합니다.");
             Thread.Sleep(2000);
         }
         public override void Render()
         {
-            Console.Clear();
-            Console.WriteLine("다른 방으로 이동합니다.");
-            Console.WriteLine("1. 조사");
-            Console.WriteLine("2. 복도");
+            Console.WriteLine();
+            Console.WriteLine("========================");
+            Console.WriteLine("무엇을 하시겠습니까.");
+            Console.WriteLine("========================");
+            Console.WriteLine("1. 조사한다");
+            Console.WriteLine("2. 복도로 돌아간다");
+            Console.WriteLine("========================");
             Console.Write("선택 :");
         }
         public override void Input()

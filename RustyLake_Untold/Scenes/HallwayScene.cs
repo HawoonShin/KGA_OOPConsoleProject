@@ -69,10 +69,10 @@
                     game.ChangeScene(SceneType.Kitchen);
                     break;
                 case "3":
-                    Console.Clear();
-                    Console.WriteLine("화학 실험실로 이동합니다.");
-                    Thread.Sleep(2000);
-                    game.ChangeScene(SceneType.ChemistryLab);
+                        Console.Clear();
+                        Console.WriteLine("화학 실험실로 이동합니다.");
+                        Thread.Sleep(2000);
+                        game.ChangeScene(SceneType.ChemistryLab);
                     break;
                 case "4":
                     Console.Clear();
@@ -81,10 +81,25 @@
                     game.ChangeScene(SceneType.ElectricalRoom);
                     break;
                 case "5":
+                    if (game.inventory.ItemCheck("팔") == true)
+                    {
                     Console.Clear();
+                    Console.WriteLine("당신은 갖고있던 팔을 지문인식기에 가져다 댑니다.");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("지문 인식기가 인증되었다는 소리와 함께 문이 열립니다.");
+                    Thread.Sleep(2000);
                     Console.WriteLine("사무실로 이동합니다.");
                     Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Office);
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine(" 사무실은 잠겨 있습니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine(" 지문인식으로 여는 문 같습니다.");
+                        Thread.Sleep(2000);
+                    }
                     break;
                 case "6":
                     Console.Clear();
