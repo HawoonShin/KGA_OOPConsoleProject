@@ -33,11 +33,12 @@ namespace RustyLake_Untold.Bedroom
             Console.WriteLine();
             Console.WriteLine("============================");
             Console.WriteLine(" 어느 서랍장을 조사하겠습니까?");
+            Console.WriteLine("============================");
             Console.WriteLine(" 1번째 서랍장");
             Console.WriteLine(" 2번째 서랍장");
             Console.WriteLine(" 3번째 서랍장");
             Console.WriteLine("============================");
-            Console.WriteLine(" 0. 인벤토리 확인");
+            //Console.WriteLine(" 0. 인벤토리 확인");
             Console.WriteLine(" 9. 조사로 돌아간다");
             Console.WriteLine("============================");
 
@@ -53,8 +54,9 @@ namespace RustyLake_Untold.Bedroom
             {
                 //서랍 1째칸에 힌트들로 비밀번호 입력
                 case "1":
-                    Console.WriteLine("서랍장은 비밀번호로 잠겨 있습니다.");
-                    Console.Write("비밀번호 입력 :(제작용 번호 26773)");
+                    Console.WriteLine(" 서랍장은 비밀번호로 잠겨 있습니다.");
+                    Thread.Sleep(2000);
+                    Console.Write(" 비밀번호 입력 :(제작용 번호 26773)");
                     int.TryParse(Console.ReadLine(), out int input2);
                     if (input2 == 26773)
                     {
@@ -64,11 +66,13 @@ namespace RustyLake_Untold.Bedroom
                         bedroomKey.description = "침실문을 열수 있는 작은 열쇠";
 
                         game.inventory.Add(bedroomKey);
-                        Console.WriteLine("열쇠를 발견하였습니다.");
+                        Console.WriteLine(" 열쇠를 발견하였습니다.");
+                        Thread.Sleep(2000);
                     }
                     else
                     {
-                        Console.WriteLine("옷장 조사로 돌아갑니다.");
+                        Console.WriteLine(" 당신은 숫자를 입력했지만 열리지 않습니다.");
+                        Thread.Sleep(2000);
                     }
                     break;
 
@@ -82,7 +86,10 @@ namespace RustyLake_Untold.Bedroom
 
                     game.inventory.Add(hint1);
 
-                    Console.WriteLine("힌트를 발견하였습니다.");
+                    Console.WriteLine(" 메모를 발견하였습니다.");
+                    Thread.Sleep(2000);
+                    Console.WriteLine(" 메모에는 [73]이라고 적혀있습니다.");
+                    Thread.Sleep(2000);
                     break;
 
                 //서랍 3째칸에 손전등
@@ -96,7 +103,8 @@ namespace RustyLake_Untold.Bedroom
 
                     game.inventory.Add(fleshright);
 
-                    Console.WriteLine("손전등을 발견하였습니다.");
+                    Console.WriteLine(" 손전등을 발견하였습니다.");
+                    Thread.Sleep(2000);
                     break;
                 case "0":
                     game.ChangeScene(SceneType.Inventory);
