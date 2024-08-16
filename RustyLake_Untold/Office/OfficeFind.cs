@@ -5,6 +5,8 @@ namespace RustyLake_Untold.Office
     internal class OfficeFind : Scene
     {
         private string input;
+        Inventory inventory;
+        Item Item;
         public OfficeFind(Game game) : base(game)
         {
             // this.game = game;

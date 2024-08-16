@@ -66,7 +66,7 @@ namespace RustyLake_Untold.Bedroom
                     game.inventory.Add(hint2);
 
                     Console.Clear();
-                    Console.WriteLine("힌트1을 찾았습니다.");
+                    Console.WriteLine("메모지를 찾았습니다.");
                     Thread.Sleep(2000);
                     Console.WriteLine("메모지에는 [267] 이라는 숫자만 적혀있습니다.");
                     Thread.Sleep(3000);

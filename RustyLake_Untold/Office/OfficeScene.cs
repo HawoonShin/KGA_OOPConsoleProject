@@ -13,6 +13,8 @@ namespace RustyLake_Untold.Office
         //복도 와 연결
 
         private string input;
+        Inventory inventory;
+        Item Item;
 
         public OfficeScene(Game game) : base(game)
         {

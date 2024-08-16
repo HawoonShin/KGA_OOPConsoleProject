@@ -8,6 +8,8 @@ namespace RustyLake_Untold.HiddenRoom
         // 침실과 연결
 
         private string input;
+        Inventory inventory;
+        Item Item;
 
         public HiddenRoomScene(Game game) : base(game)
         {

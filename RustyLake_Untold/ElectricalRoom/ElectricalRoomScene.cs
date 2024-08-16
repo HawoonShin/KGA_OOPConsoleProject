@@ -13,6 +13,8 @@ namespace RustyLake_Untold.ElectricalRoom
         //복도와 연결
 
         private string input;
+        Inventory inventory;
+        Item Item;
 
         public ElectricalRoomScene(Game game) : base(game)
         {

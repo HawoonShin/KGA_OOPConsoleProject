@@ -10,6 +10,8 @@ namespace RustyLake_Untold.Office
     internal class OfficeComputer : Scene
     {
         private string input;
+        Inventory inventory;
+        Item Item;
         public OfficeComputer(Game game) : base(game)
         {
             //this.game = game;

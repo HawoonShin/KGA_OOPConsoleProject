@@ -9,7 +9,8 @@ namespace RustyLake_Untold.Kitchen
     {
         // 복도와 연결
         private string input;
-
+        Inventory inventory;
+        Item Item;
         public KitchenScene(Game game) : base(game)
         {
 

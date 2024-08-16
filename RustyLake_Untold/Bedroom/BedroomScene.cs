@@ -90,10 +90,26 @@ namespace RustyLake_Untold.Bedroom
                         Thread.Sleep(2000);
                     }
                     break;
-                //임시 엔딩확인용 다이렉트 루트
+                //임시 다이렉트 루트
                 case "18":
-                    game.ChangeScene(SceneType.Ending); break;
+                    game.ChangeScene(SceneType.Ending); 
                     break;
+                case "부엌":
+                    game.ChangeScene(SceneType.Kitchen); 
+                    break;
+                case "화학실험실":
+                    game.ChangeScene(SceneType.ChemistryLab);
+                    break;
+                case "전기실":
+                    game.ChangeScene(SceneType.ElectricalRoom);
+                    break;
+                case "숨겨진방":
+                    game.ChangeScene(SceneType.HiddenRoom);
+                    break;
+                case "사무실":
+                    game.ChangeScene(SceneType.Office);
+                    break;
+
 
             }
         }

@@ -6,7 +6,8 @@ namespace RustyLake_Untold.Kitchen
     {
         //protected Game game;
         private string input;
-
+        Inventory inventory;
+        Item Item;
         public KitchenFind(Game game) : base(game)
         {
             //  this.game = game;

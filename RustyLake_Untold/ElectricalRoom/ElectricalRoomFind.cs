@@ -11,6 +11,8 @@ namespace RustyLake_Untold.ElectricalRoom
     {
         // protected Game game;
         private string input;
+        Inventory inventory;
+        Item Item;
 
         public ElectricalRoomFind(Game game) :base(game) 
         {

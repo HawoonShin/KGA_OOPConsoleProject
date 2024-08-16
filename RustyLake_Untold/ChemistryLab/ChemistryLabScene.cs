@@ -12,7 +12,8 @@ namespace RustyLake_Untold.ChemistryLab
     public class ChemistryLabScene : Scene
     {
         private string input;
-
+        Inventory inventory;
+        Item Item;
         public ChemistryLabScene(Game game) : base(game)
         {
 

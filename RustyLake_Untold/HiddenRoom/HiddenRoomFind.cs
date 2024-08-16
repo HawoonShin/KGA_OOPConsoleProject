@@ -5,6 +5,8 @@ namespace RustyLake_Untold.HiddenRoom
     internal class HiddenRoomFind : Scene
     {
         private string input;
+        Inventory inventory;
+        Item Item;
         public HiddenRoomFind(Game game) : base(game)
         {
             // this.game = game;

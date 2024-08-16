@@ -81,11 +81,14 @@ namespace RustyLake_Untold
             scenes[(int)SceneType.Hallway] = new HallwayScene(this);
 
             scenes[(int)SceneType.Kitchen] = new KitchenScene(this);
+            scenes[(int)SceneType.KitchenFind] = new KitchenFind(this);
 
             scenes[(int)SceneType.ChemistryLab] = new ChemistryLabScene(this);
-            scenes[(int)SceneType.ChemistryLabFind] = new ChemistryLabScene(this);
+            scenes[(int)SceneType.ChemistryLabFind] = new ChemistryLabFind(this);
 
             scenes[(int)SceneType.ElectricalRoom] = new ElectricalRoomScene(this);
+            scenes[(int)SceneType.ElectricalRoomFind] = new ElectricalRoomFind(this);
+
 
             scenes[(int)SceneType.Office] = new OfficeScene(this);
             scenes[(int)SceneType.OfficeFind] = new OfficeFind(this);

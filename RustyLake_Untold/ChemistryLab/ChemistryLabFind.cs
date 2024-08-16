@@ -4,9 +4,11 @@ namespace RustyLake_Untold.ChemistryLab
 {
     internal class ChemistryLabFind : Scene
     {
-        protected Game game;
+        //protected Game game;
         private string input;
 
+        Inventory inventory;
+        Item Item;
         public ChemistryLabFind(Game game) : base(game)
         {
             //this.game = game;
@@ -60,10 +62,7 @@ namespace RustyLake_Untold.ChemistryLab
                     //아이템 4개가 있는게 확인이 되면 
                     //실험이 진행된다.
                     //아닐경우 다음같은 메세지 출력
-                    if (game.inventory.ItemCheck("물") == true &&
-                        game.inventory.ItemCheck("커피") == true &&
-                        game.inventory.ItemCheck("산성액") == true &&
-                        game.inventory.ItemCheck("얼음") == true)
+                    if (game.inventory.ItemCheck("물") == true && game.inventory.ItemCheck("커피") == true && game.inventory.ItemCheck("산성액") == true && game.inventory.ItemCheck("얼음") == true)
                     {
                         Console.Clear();
                         Console.WriteLine(" 당신은 갖고있던 물, 커피, 산성액, 얼음을");
