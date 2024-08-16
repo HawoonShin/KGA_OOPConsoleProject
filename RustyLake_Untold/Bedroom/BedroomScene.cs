@@ -97,6 +97,9 @@ namespace RustyLake_Untold.Bedroom
                 case "부엌":
                     game.ChangeScene(SceneType.Kitchen); 
                     break;
+                case "복도":
+                    game.ChangeScene(SceneType.Hallway); 
+                    break;
                 case "화학실험실":
                     game.ChangeScene(SceneType.ChemistryLab);
                     break;

@@ -103,7 +103,8 @@ namespace RustyLake_Untold.Kitchen
                     // 휴지통에서 커피필터 아이템 구하기
                     //물탱크에 물 채우기
                     if (game.inventory.ItemCheck("물") == true &&
-                       game.inventory.ItemCheck("커피 필터") == true)
+                       game.inventory.ItemCheck("커피 필터") == true &&
+                       game.inventory.ItemCheck("전기 연결") == true)
                     {
                         Console.Clear();
                         Console.WriteLine("당신은 커피 메이커를 사용합니다.");
@@ -190,6 +191,9 @@ namespace RustyLake_Untold.Kitchen
                 case "6":
                     // 전원 복원시 사용가능
                     // 사무실의 번호로 전화 가능
+                    if(game.inventory.ItemCheck("전기 연결")==true)
+                    {
+
                     Console.Clear();
                     Console.WriteLine("당신은 수화기를 들고 번호를 누르기 시작합니다.");
                     Console.Write("입력 :(099174190)");
@@ -211,6 +215,14 @@ namespace RustyLake_Untold.Kitchen
                         Thread.Sleep(2000);
                         Console.WriteLine("그리고 전화는 끊어집니다.");
                         Thread.Sleep(2000);
+                    }
+                    else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("잘.못.거.셨.습.니.다.");
+                            Thread.Sleep(2000);
+                            Console.ResetColor();
+                        }
                     }
                     else
                     {

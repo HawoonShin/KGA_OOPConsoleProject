@@ -85,7 +85,18 @@ namespace RustyLake_Untold.Office
 
                 //책장
                 case "3":
-                    // 컴퓨터에서 얻은 정보로 미로 확보 가능(보류)
+                    // 마침 드라이버 찾을 곳이 필요했다. 
+                    Console.Clear();
+                    Console.WriteLine("책장에는 어째선지 드라이버가 놓여있습니다.");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("드라이버를 얻었습니다.");
+                    Thread.Sleep(2000);
+
+                    Item driver = new Item(this);
+                    driver.id = 15;
+                    driver.name = "드라이버";
+                    driver.description = "일자 드라이버입니다.";
+                    game.inventory.Add(driver);
                     break;
 
                     //포스터

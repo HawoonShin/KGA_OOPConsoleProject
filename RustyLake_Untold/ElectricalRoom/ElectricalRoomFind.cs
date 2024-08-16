@@ -59,6 +59,12 @@ namespace RustyLake_Untold.ElectricalRoom
                     if(game.inventory.ItemCheck("퓨즈") == true)
                     {
                         //불이 들어온다
+                        Item electricConnect = new Item(this);
+                        electricConnect.id = 14;
+                        electricConnect.name = "전기 연결";
+                        electricConnect.description = "전기가 연결된 상태입니다";
+                        game.inventory.Add(electricConnect);
+
                         Console.Clear();
                         Console.WriteLine(" 퓨즈박스에 작은 스파크가 튑니다.");
                         Thread.Sleep(2000);

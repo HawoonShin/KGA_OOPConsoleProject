@@ -83,14 +83,31 @@
                 case "5":
                     if (game.inventory.ItemCheck("팔") == true)
                     {
-                    Console.Clear();
-                    Console.WriteLine("당신은 갖고있던 팔을 지문인식기에 가져다 댑니다.");
-                    Thread.Sleep(2000);
-                    Console.WriteLine("지문 인식기가 인증되었다는 소리와 함께 문이 열립니다.");
-                    Thread.Sleep(2000);
-                    Console.WriteLine("사무실로 이동합니다.");
-                    Thread.Sleep(2000);
-                    game.ChangeScene(SceneType.Office);
+                        Console.Clear();
+                        Console.WriteLine("당신은 갖고있던 팔을 지문인식기에 가져다 댑니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("하지만 전기가 들어오지 않아서 인식되지 않습니다.");
+                        Thread.Sleep(2000);
+                    }
+                    else if(game.inventory.ItemCheck("전기 연결") == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("전기가 들어와 지문 인식기가 작동합니다. ");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("하지만 당신의 손으로는 열리지 않습니다.");
+                        Thread.Sleep(2000);
+                    }
+                    else if(game.inventory.ItemCheck("전기 연결") == true &&
+                        game.inventory.ItemCheck("팔") == true)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("당신은 갖고있던 팔을 지문인식기에 가져다 댑니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("지문 인식기가 인증되었다는 소리와 함께 문이 열립니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("사무실로 이동합니다.");
+                        Thread.Sleep(2000);
+                        game.ChangeScene(SceneType.Office);
                     }
                     else
                     {
