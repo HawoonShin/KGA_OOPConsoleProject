@@ -24,9 +24,9 @@ namespace RustyLake_Untold.Bedroom
         {
             Console.Clear();
             Console.WriteLine(" 작고 소박한 나무로 만든 옷장입니다.");
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             Console.WriteLine(" 옷장에는 3개의 서랍장이 있습니다.");
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
         }
         public override void Render()
         {

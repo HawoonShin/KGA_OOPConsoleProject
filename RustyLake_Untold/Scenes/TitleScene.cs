@@ -23,7 +23,6 @@ namespace RustyLake_Untold.Scenes
         public override void Exit()
         {
             Console.Clear();
-            Console.WriteLine();
             Console.WriteLine(" 당신은 어둠 속에서 한없이 떨어지는 느낌을 받습니다.");
             Thread.Sleep(2000);
             Console.WriteLine(" 당신은 당신이 누구인지, 어디인지 알수없습니다.");
@@ -34,7 +33,7 @@ namespace RustyLake_Untold.Scenes
             Console.ResetColor();
             Thread.Sleep(2000);
             Console.WriteLine(" 그 목소리에 당신은 눈을 뜹니다...");
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
         }
 
         public override void Input() 

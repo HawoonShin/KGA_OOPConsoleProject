@@ -20,19 +20,19 @@ namespace RustyLake_Untold.Bedroom
             Console.Clear();
             Console.WriteLine(" 눈 앞에 침실이 있습니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("눈앞에는 침대와 문, 수납형 옷장이 보입니다.");
+            Console.WriteLine(" 눈앞에는 침대와 문, 수납형 옷장이 보입니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("벽에는 환풍구가 있고 cctv가 돌아갑니다.");
+            Console.WriteLine(" 벽에는 환풍구가 있고 cctv가 돌아갑니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("바닥에는 러그가 놓여있고 그 외에는 특별한 것은 보이지 않습니다 ");
+            Console.WriteLine(" 바닥에는 러그가 놓여있고 그 외에는 특별한 것은 보이지 않습니다 ");
             Thread.Sleep(3000); //잠시 글씨를 멈추게 한다
         }
         public override void Render()
         {
-            Console.Clear();
             Console.WriteLine();
             Console.WriteLine("==============================");
             Console.WriteLine("무엇을 조사하겠습니까?");
+            Console.WriteLine("==============================");
             Console.WriteLine("1. 침대");
             Console.WriteLine("2. 문");
             Console.WriteLine("3. 옷장");
@@ -65,20 +65,27 @@ namespace RustyLake_Untold.Bedroom
 
                     game.inventory.Add(hint2);
 
-                    Console.WriteLine("힌트1을 찾았다!");
-                    Console.WriteLine("(아이템은 이벤토리에서 확인 가능합니다.)");
+                    Console.Clear();
+                    Console.WriteLine("힌트1을 찾았습니다.");
+                    Thread.Sleep(2000);
+                    Console.WriteLine("메모지에는 [267] 이라는 숫자만 적혀있습니다.");
+                    Thread.Sleep(3000);
                     break;
                 //문
                 case "2":
-                    if(game.inventory.ItemCheck("침실 열쇠") == true)
+                    if (game.inventory.ItemCheck("침실 열쇠") == true)
                     {
                         Console.WriteLine("당신은 열쇠로 이 문을 열수 있을 거 같습니다.");
+                        Thread.Sleep(2000);
                         Console.WriteLine("(조사 화면을 나가서 열쇠를 사용해 주세요.)");
+                        Thread.Sleep(2000);
                     }
                     else
                     {
-                    Console.WriteLine("열쇠로 열리는 문같다.");
-                    Console.WriteLine("열쇠를 찾아보자.");
+                        Console.WriteLine("열쇠로 열리는 문 같습니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("열쇠를 찾아야합니다.");
+                        Thread.Sleep(2000);
 
                     }
                     break;
@@ -92,17 +99,20 @@ namespace RustyLake_Untold.Bedroom
                     {
                         //안쪽은 미로
                         Console.WriteLine("당신은 드라이버로 환풍구를 열었습니다.");
+                        Thread.Sleep(2000);
                         Console.WriteLine("어둡고 먼지가 가득한 공간입니다.");
+                        Thread.Sleep(2000);
                         Console.WriteLine("당신은 감각에 의지하며 앞으로 기어 나갑니다.");
+                        Thread.Sleep(2000);
                         game.ChangeScene(SceneType.HiddenRoom);
 
                     }
-                    else 
+                    else
                     {
-                    Console.WriteLine("환풍구는 사람이 들어갈 정도로 입구가 커 보입니다.");
-                    Thread.Sleep(1000);
-                    Console.WriteLine("하지만 지금은 할 수 있는게 없습니다.");
-                    Thread.Sleep(1000);
+                        Console.WriteLine("환풍구는 사람이 들어갈 정도로 입구가 커 보입니다.");
+                        Thread.Sleep(1000);
+                        Console.WriteLine("하지만 지금은 할 수 있는게 없습니다.");
+                        Thread.Sleep(1000);
                     }
                     break;
                 // 카메라 
@@ -129,9 +139,9 @@ namespace RustyLake_Untold.Bedroom
                     else
                     {
                         Console.WriteLine("밑 쪽에 공간을 발견합니다!");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
                         Console.WriteLine("하지만 너무 어두워서 무언가 필요할 것 같습니다.");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
                     }
                     break;
                 case "0":

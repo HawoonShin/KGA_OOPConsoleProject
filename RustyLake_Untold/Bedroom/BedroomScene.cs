@@ -23,13 +23,13 @@ namespace RustyLake_Untold.Bedroom
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine(" 눈 앞에 침실이 있습니다.");
+            Console.WriteLine(" 눈을 뜬 당신의 앞에는 침실이 있습니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("눈앞에는 침대와 문, 서랍이 보입니다.");
+            Console.WriteLine(" 침실은 어둡웠고, 네모나고 하얀 타일이 깔려있습니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("벽에는 환풍구가 있고 cctv가 돌아갑니다.");
+            Console.WriteLine(" 당신은 침대에서 일어났습니다.");
             Thread.Sleep(2000);
-            Console.WriteLine("바닥에는 러그가 놓여있고 그 외에는 특별한 것은 보이지 않습니다 ");
+            Console.WriteLine(" 어서 여기서 탈출해야만 할거 같습니다.");
             Thread.Sleep(3000); //잠시 글씨를 멈추게 한다
         }
 
@@ -49,8 +49,8 @@ namespace RustyLake_Untold.Bedroom
         {
             Console.WriteLine("========================");
             Console.WriteLine("무엇을 하시겠습니까?");
-            Console.WriteLine();
-            Console.WriteLine("0. 아이템을 확인한다.");
+            Console.WriteLine("========================");
+            //Console.WriteLine("0. 아이템을 확인한다.");
             Console.WriteLine("1. 주변을 조사한다");
             Console.WriteLine("2. 문을 열고 나간다");
             Console.WriteLine("========================");
@@ -62,25 +62,40 @@ namespace RustyLake_Untold.Bedroom
             switch (input)
             {
                 case "0":
+                    Console.Clear();
                     Console.WriteLine("인벤토리를 확인합니다.");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.Inventory);
                     break;
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("조사합니다.");
+                    Console.WriteLine(" 당신은 방을 둘러보기로 결정했습니다..");
+                    Thread.Sleep(2000);
                     game.ChangeScene(SceneType.BedroomFind); break;
                 case "2":
                     if (game.inventory.ItemCheck("침실 열쇠") == true)
                     {
-                    game.ChangeScene(SceneType.Hallway);
+                        Console.Clear();
+                        Console.WriteLine(" 당신이 갖고 있던 열쇠는 방문에 딱 맞았습니다.");
+                        Thread.Sleep(2000);
+                        Console.WriteLine(" 당신은 열쇠를 넣고 문을 열었습니다.");
+                        Thread.Sleep(2000);
+                        game.ChangeScene(SceneType.Hallway);
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("열쇠가 없는 당신은 문을 열지 못합니다.");
+                        Thread.Sleep(2000);
                     }
-                        break;
+                    break;
                 case "3":
                     game.ChangeScene(SceneType.HiddenRoom); break;
+
+                    //임시 엔딩확인용 다이렉트 루트
+                    case "18":
+                    game.ChangeScene(SceneType.Ending); break;
+                    break;
 
             }
         }
