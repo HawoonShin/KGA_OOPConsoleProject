@@ -99,7 +99,8 @@ namespace RustyLake_Untold.Bedroom
                     //드라이버 소지시 오픈가능
                     if (game.inventory.ItemCheck("드라이버") == true)
                     {
-                        //안쪽은 미로
+                        // 안쪽은 미로
+                        // 미로는 시간상 구현하지 못함
                         Console.Clear();
                         Console.WriteLine(" 당신은 드라이버로 환풍구를 열었습니다.");
                         Thread.Sleep(2000);

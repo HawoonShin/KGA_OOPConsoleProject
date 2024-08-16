@@ -15,12 +15,22 @@ namespace RustyLake_Untold.Kitchen
         public override void Enter()
         {
             Console.Clear();
-            Console.WriteLine("부엌 묘사");
+            Console.WriteLine("주변을 둘러보자 옷이 걸린 의자와 작은 테이블이 보이고");
+            Thread.Sleep(2000);
+            Console.WriteLine("테이블 위로는 아이스박스가 보입니다");
+            Thread.Sleep(2000);
+            Console.WriteLine("싱크대에는 커피메이커가 있습니다.");
+            Thread.Sleep(2000);
+            Console.WriteLine("구석에는 쓰레기통이 있고 벌레가 윙윙거립니다.");
+            Thread.Sleep(2000);
+            Console.WriteLine("벽에는 환풍기와 전화기도 있습니다.");
+            Thread.Sleep(2000);
         }
         public override void Render()
         {
             Console.WriteLine();
-            Console.WriteLine("조사할 곳을 선택해 주세요.");
+            Console.WriteLine("=======================");
+            Console.WriteLine("무엇을 조사하겠습니까?");
             Console.WriteLine("=======================");
             Console.WriteLine("1. 코트");
             Console.WriteLine("2. 싱크대");
@@ -29,8 +39,9 @@ namespace RustyLake_Untold.Kitchen
             Console.WriteLine("5. 아이스박스");
             Console.WriteLine("6. 전화기");
             Console.WriteLine("=======================");
-            Console.WriteLine("0. 인벤토리 확인");
-            Console.WriteLine("9. 뒤로가기");
+            //Console.WriteLine("0. 인벤토리 확인");
+            Console.WriteLine("9. 부엌으로 돌아간다");
+            Console.WriteLine("=======================");
             Console.Write("선택 :");
         }
 
@@ -44,6 +55,7 @@ namespace RustyLake_Untold.Kitchen
             {
                 //코트
                 case "1":
+                    Console.Clear();
                     Console.WriteLine("의자에 걸려있던 실험복을 조사 했지만");
                     Console.WriteLine("실험복에 특별한 건 없었다.");
                     Console.WriteLine("다만 실험복의 신분증에는 R.Venderboom 이라고 써있었다.");
@@ -55,6 +67,7 @@ namespace RustyLake_Untold.Kitchen
                     if (game.inventory.ItemCheck("렌치") == true)
                     {
                         //그러면 물이 나온다.
+                        Console.Clear();
                         Console.WriteLine("당신은 갖고 있던 렌치로 싱크대 밑의 관을 고쳤습니다. ");
                         Console.WriteLine("수도꼭지에서는 곧 물이 나오기 시작했습니다.");
                         Console.WriteLine("당신은 물을 얻었습니다");
@@ -69,6 +82,7 @@ namespace RustyLake_Untold.Kitchen
 
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("물이 나오지 않습니다.");
                         Console.WriteLine("세면대의 아래 벨브를 고치면 나올 것 같습니다.");
                     }
@@ -82,6 +96,7 @@ namespace RustyLake_Untold.Kitchen
                     if (game.inventory.ItemCheck("물") == true &&
                        game.inventory.ItemCheck("커피 필터") == true)
                     {
+                        Console.Clear();
                         Console.WriteLine("당신은 커피 메이커를 사용합니다.");
                         Console.WriteLine("커피 필터를 끼우고 옆에 놓여있던 커피 가루를 집어 넣습니다.");
                         Console.WriteLine("물을 채우고 커피가 내리길 잠시 기다립니다.");
@@ -96,7 +111,11 @@ namespace RustyLake_Untold.Kitchen
 
                         game.inventory.Add(coffee);
                     }
-                    Console.WriteLine("커피 메이커를 사용하기엔 무언가 더 필요할 것 같다..");
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("커피 메이커를 사용하기엔 무언가 더 필요할 것 같다..");
+                    }
                     break;
 
                 //쓰레기통 

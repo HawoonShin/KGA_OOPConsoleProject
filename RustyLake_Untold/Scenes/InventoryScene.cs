@@ -14,6 +14,7 @@ namespace RustyLake_Untold.Scenes
         //
         //protected Game game;
         // 이쪽은 인벤을 확인하는 용도
+        // 시간상 구현하지 못함
         
 
         public InventoryScene(Game game) 
