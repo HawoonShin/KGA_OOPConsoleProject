@@ -9,6 +9,7 @@ namespace RustyLake_Untold.Bedroom
         private string input;
 
         Inventory inventory;
+        Item Item;
 
         public BedroomFind(Game game) : base(game)
         {

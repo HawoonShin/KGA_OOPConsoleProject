@@ -42,7 +42,10 @@ namespace RustyLake_Untold.Office
             Console.WriteLine("==========================");
             Console.Write("선택 :");
         }
-        public override void Input() { }
+        public override void Input() 
+        {
+            input = Console.ReadLine();
+        }
         public override void Update()
         {
             switch (input)
